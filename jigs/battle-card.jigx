@@ -1,4 +1,4 @@
-title: Name
+title: Battle card
 description: Description of your Jig
 type: jig.default
 
@@ -12,24 +12,36 @@ datasources:
           title: Vyběhni na Everest!
           friendPhoto: https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80  
           friendName: Julian
-  friendData:
-    type: datasource.static
-    options:
-      data:
-        - id: 1
-          friendName: Julian
+          result: 1
+          number: 5
+          daysLeft: 2
+        - id: 2
+          title: Vyběhni na Everest!
           friendPhoto: https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80  
-        - id: 1
-          friendName: Juliana
-          friendPhoto: https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80
-
+          friendName: Julian
+          result: 1
+          number: 5
+          daysLeft: 2
+  # friendData:
+  #   type: datasource.static
+  #   options:
+  #     data:
+  #       - id: 1
+  #         friendName: Julian
+  #         friendPhoto: https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3httpsfDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80  
+  #         result: 1
+  #         number: 5
+  #       - id: 1
+  #         friendName: Juliana
+  #         friendPhoto: https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80
+  #         result: 2
+  #         number: 8
 children:
   - type: component.list
     options:
       isHorizontal: true
       isHorizontalScrollIndicatorHidden: true
       data: =@ctx.datasources.battleCard-1
-      maximumItemsToRender: 8
       item: 
         type: component.custom-component
         componentId: battle-card-custom
@@ -37,4 +49,7 @@ children:
           title: =@ctx.current.item.title
           friendPhoto: =@ctx.current.item.friendPhoto
           friendName: =@ctx.current.item.friendName
+          result: =@ctx.current.item.result
+          number: =of & ' ' & @ctx.current.item.number
+          daysLeft: =@ctx.current.item.daysLeft
             

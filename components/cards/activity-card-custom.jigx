@@ -13,7 +13,7 @@ children:
           options:
             style:
               flex:
-                direction: row
+                direction: column
               justifyContent: space-between
               
               gap: small

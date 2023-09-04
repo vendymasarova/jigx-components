@@ -5,43 +5,65 @@ children:
       style:
         flex: 
           direction: column
-        gap: small
+        gap: medium
+        margin: 
+          right: small
       children:
         - type: component.card
           options:
-            children:
-              # Hedader with avatar list
+            children: 
               - type: component.view
                 options:
                   style:
                     flex:
-                      direction: row
+                      grow: 1
                     justifyContent: space-between
+                    height: 
+                      min: 214
+                    width: 
+                      max: 294
+                    padding: medium
                   children:
-                    # Left side - icon, title, avatars
+                     # Hedader with avatar list
                     - type: component.view
                       options:
                         style:
-                          flex: 
+                          flex:
                             direction: column
-                            # Text + icon
+                          justifyContent: space-between
+                          gap: medium
                         children:
+                          # Title with icon + arrow right icon
                           - type: component.view
                             options:
                               style:
-                                gap: small
+                                flex:
+                                  direction: row
+                                justifyContent: space-between
                               children:
+                                - type: component.view
+                                  options:
+                                    style:
+                                      flex: 
+                                        direction: row
+                                      gap: small
+                                      alignItems: center
+                                    children:
+                                      - type: component.icon
+                                        options:
+                                          icon: running
+                                          size: small
+                                          shape: circle
+                                          type: duotone
+                                      - type: component.text
+                                        options:
+                                          value: =@ctx.inputs.title
+                                          size: small
+                                          weight: semi-bold
                                 - type: component.icon
                                   options:
-                                    icon: running
-                                    size: small
-                                    type: duotone
-                                - type: component.text
-                                  options:
-                                    value: =@ctx.inputs.title
-                                    size: small
-                                    weight: semi-bold
-                                    
+                                    icon: arrow-right
+                          
                           - type: component.view
                             options:
                               style:
@@ -52,6 +74,60 @@ children:
                                   options:
                                     title: =@ctx.inputs.friendName
                                     uri: =@ctx.inputs.friendPhoto
-                    - type: component.icon
+                                    size: small
+                      # Body
+                    - type: component.view
                       options:
-                        icon: arrow-right
+                        style:
+                          flex: 
+                            direction: row
+                          justifyContent: space-between
+                          alignItems: center
+                        children:
+                          # left title
+                          - type: component.view
+                            options:
+                              style:
+                                flex: 
+                                  
+                              children:
+                                - type: component.text
+                                  options:
+                                    value: You are..
+                          # center title
+                          - type: component.view
+                            options:
+                              style:
+                                
+                              children:
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.result
+                                    size: extra-large
+                                    weight: bold
+                          # right title
+                          - type: component.view
+                            options:
+                              style:
+                                
+                              children:
+                              - type: component.text
+                                options:
+                                  value: =@ctx.inputs.number
+                      # footer
+                    - type: component.view
+                      options:
+                        style:
+                          justifyContent: flex-end
+                        children:
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.daysLeft & ' days till end'
+                              size: tiny
+                              emphasis: low-medium
+                              align: right
+
+                              
+                      
+                          
+                          
