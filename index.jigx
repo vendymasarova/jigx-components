@@ -1,0 +1,8 @@
+name: my-custom-components
+title: my-custom-components
+category: business
+widgets:
+  - size: 1x1 # choose size of the widget on the home hub
+    jigId: activity-card
+  - size: 1x1 # choose size of the widget on the home hub
+    jigId: battle-card

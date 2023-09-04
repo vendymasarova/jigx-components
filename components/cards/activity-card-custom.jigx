@@ -1,0 +1,382 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        flex:
+          direction: row
+        justifyContent: space-between
+        gap: medium
+      children:
+        
+        - type: component.view
+          options:
+            style:
+              flex:
+                direction: row
+              justifyContent: space-between
+              
+              gap: small
+            children:
+              
+              # First Card
+              - type: component.card
+                options:
+                  direction: column
+                  children:
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            direction: row
+                          justifyContent: space-between
+                          gap: small
+                          
+                        children:
+                          
+                          # Content
+                          - type: component.view
+                            options:
+                              style: 
+                                  flex:
+                                    direction: row
+                                  justifyContent: space-between
+                                  alignItems: center
+                                  gap: medium
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: =@ctx.inputs.icon
+                                    shape: circle
+                                    color: color1
+                                    type: basic
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.title
+                                    align: left
+                                    size: medium
+                                    weight: bold
+                    - type: component.view
+                      when: =@ctx.inputs.isActivitySet ? false:true
+                      options:
+                        style:
+                          flex: 
+                            direction: column
+                        children:
+                          - type: component.view
+                            options:
+                              style:
+                                flex: 
+                                  direction: row
+                                justifyContent: flex-start
+                                alignItems: baseline
+                                gap: small
+                              children:
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.currentNumber
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.goalNumber
+                          - type: component.pie-chart
+                            options:
+                              chart:
+                                title:
+                                  text: =@ctx.inputs.label
+                                  verticalAlign: center
+                                isAnimated: true
+                                width: 125
+                                height: 115
+                              series:
+                                - data: =[{"y":20, "color":"color4"}, {"y":80, "color":"color3"}]
+                                  layout: pie
+                    - type: component.view
+                      when: =@ctx.inputs.isActivitySet ? true:false
+                      options:
+                        style:
+                          flex:
+                            direction: column
+                            grow: 1
+                          # justifyContent: center
+                          alignItems: center
+                          gap: small
+                        children:
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.setActivity
+                          - type: component.icon
+                            options:
+                              icon: plus
+                              shape: circle
+                              size: =@ctx.inputs.iconSize
+                              color: color8
+                              type: duotone
+                # Second Card
+              - type: component.card
+                options:
+                  direction: column
+                  children:
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            grow: 1
+                          gap: small
+                        children:
+                          
+                          # Content
+                          - type: component.view
+                            options:
+                              style: 
+                                  flex:
+                                    direction: row
+                                
+                                  alignItems: center
+                                  gap: medium
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: =@ctx.inputs.icon
+                                    shape: circle
+                                    color: color1
+                                    type: basic
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.title
+                                    align: left
+                                    size: medium
+                                    weight: bold
+                    - type: component.view
+                      when: =@ctx.inputs.isActivitySet ? false:true
+                      options:
+                        style:
+                          flex: 
+                            direction: column
+                        children:
+                          - type: component.view
+                            options:
+                              style:
+                                flex: 
+                                  direction: row
+                                justifyContent: flex-start
+                                alignItems: baseline
+                                gap: small
+                              children:
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.currentNumber
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.goalNumber
+                          - type: component.pie-chart
+                            options:
+                              chart:
+                                title:
+                                  text: =@ctx.inputs.label
+                                  verticalAlign: center
+                                isAnimated: true
+                                width: 125
+                                height: 115
+                              series:
+                                - data: =[{"y":20, "color":"color4"}, {"y":80, "color":"color3"}]
+                                  layout: pie
+                    - type: component.view
+                      when: =@ctx.inputs.isActivitySet ? true:false
+                      options:
+                        style:
+                          flex:
+                            direction: column
+                            grow: 1
+                          # justifyContent: center
+                          alignItems: center
+                          gap: small
+                        children:
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.setActivity
+                          - type: component.icon
+                            options:
+                              icon: plus
+                              shape: circle
+                              size: =@ctx.inputs.iconSize
+                              color: color8
+                              type: duotone
+                          
+        
+        - type: component.view
+          options:
+            style:
+              flex:
+                direction: row
+              justifyContent: space-between
+              
+              gap: small
+            children:
+              - type: component.card
+                options:
+                  direction: column
+                  children:
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            grow: 1
+                            direction: row
+                          justifyContent: space-between
+                          gap: small
+                          
+                        children:
+                          
+                          # Content
+                          - type: component.view
+                            options:
+                              style: 
+                                  flex:
+                                    direction: row
+                                  justifyContent: space-between
+                                  alignItems: center
+                                  gap: medium
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: =@ctx.inputs.icon
+                                    shape: circle
+                                    color: color1
+                                    type: basic
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.title
+                                    align: left
+                                    size: medium
+                                    weight: bold
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            direction: row
+                          justifyContent: flex-start
+                          alignItems: baseline
+                          gap: small
+                        children:
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.currentNumber
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.goalNumber
+                    - type: component.pie-chart
+                      options:
+                        chart:
+                          title:
+                            text: =@ctx.inputs.label
+                            verticalAlign: center
+                          isAnimated: true
+                          width: 125
+                          height: 115
+                        series:
+                          - data: =[{"y":20, "color":"color4"}, {"y":80, "color":"color3"}]
+                            layout: pie
+              
+              - type: component.card
+                options:
+                  direction: column
+                  children:
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            grow: 1
+                          justifyContent: center
+                          alignItems: center
+                          gap: small
+                        children:
+                          
+                          # Content
+                        - type: component.view
+                          options:
+                            style:
+                              flex:
+                                direction: column
+                                grow: 1
+                              justifyContent: center
+                              alignItems: center
+                              gap: small
+                            children:
+                              - type: component.text
+                                options:
+                                  value: =@ctx.inputs.addActivity
+                              - type: component.icon
+                                options:
+                                  icon: arrow-right
+                                  shape: circle
+                                  size: =@ctx.inputs.iconSize
+        - type: component.view
+          options:
+            style:
+              flex: 
+                direction: column
+            children:
+            - type: component.card
+              options:
+                color: color3
+                children:
+                  - type: component.view
+                    options:
+                      style:
+                        gap: medium
+                        justifyContent: space-between
+                      children:
+                        - type: component.view
+                          options:
+                            style:
+                              flex:
+                                direction: row
+                              justifyContent: space-between
+                            children:
+                              - type: component.view
+                                options:
+                                  style:
+                                    flex:
+                                      direction: column
+                                    justifyContent: space-between
+                                  children:
+                                    - type: component.text
+                                      options:
+                                        value: =@ctx.inputs.tableTitle
+                                        size: large
+                                        weight: bold
+                                    - type: component.text
+                                      options:
+                                        value: =@ctx.inputs.tableSubtitle
+                                        size: large
+                                        weight: regular
+                                        emphasis: high
+                              - type: component.view
+                                options:
+                                  style:
+                                    flex:
+                                      direction: column
+                                    justifyContent: space-between
+                                  children:
+                                    - type: component.text
+                                      options:
+                                        value: =@ctx.inputs.startDate
+                                        emphasis: high
+                                    - type: component.text
+                                      options:
+                                        value: =@ctx.inputs.endDate
+                                        emphasis: high
+                                        
+                        - type: component.pie-chart
+                          options:
+                            chart:
+                              title:
+                                text: =@ctx.inputs.label
+                                verticalAlign: center
+                              isAnimated: true
+                              width: 125
+                              height: 115
+                            series:
+                              - data: =[{"y":20, "color":"color4"}, {"y":80, "color":"color3"}]
+                                layout: pie
+              

@@ -1,0 +1,57 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        flex: 
+          direction: column
+        gap: small
+      children:
+        - type: component.card
+          options:
+            children:
+              # Hedader with avatar list
+              - type: component.view
+                options:
+                  style:
+                    flex:
+                      direction: row
+                    justifyContent: space-between
+                  children:
+                    # Left side - icon, title, avatars
+                    - type: component.view
+                      options:
+                        style:
+                          flex: 
+                            direction: column
+                            # Text + icon
+                        children:
+                          - type: component.view
+                            options:
+                              style:
+                                gap: small
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: running
+                                    size: small
+                                    type: duotone
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.title
+                                    size: small
+                                    weight: semi-bold
+                                    
+                          - type: component.view
+                            options:
+                              style:
+                                flex: 
+                                  direction: row
+                              children:
+                                - type: component.avatar
+                                  options:
+                                    title: =@ctx.inputs.friendName
+                                    uri: =@ctx.inputs.friendPhoto
+                    - type: component.icon
+                      options:
+                        icon: arrow-right

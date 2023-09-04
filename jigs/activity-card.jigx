@@ -1,0 +1,52 @@
+title: Name
+description: Description of your Jig
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://builder.jigx.com/assets/images/header.jpg
+
+datasources:
+  card:
+    type: datasource.static
+    options:
+      data:
+        - icon: running
+          title: Running
+          label: '20%'
+          currentNumber: 20
+          goalNumber: 32
+          setActivity: Set your goals
+          addActivity: Add new activity
+          isActivitySet: false
+  table:
+    type: datasource.static
+    options:
+      data:
+        - tableTitle: Your goal
+          tableSubtitle: '20 / 32'
+          startDate: '1. 8. 2023'
+          endDate: '31. 8. 2023'
+children:
+  - type: component.custom-component
+    componentId: activity-card-custom
+    inputs:
+      icon: =@ctx.datasources.card.icon
+      title: =@ctx.datasources.card.title
+      label: =@ctx.datasources.card.label
+      currentNumber: =@ctx.datasources.card.currentNumber & ' / '
+      goalNumber: =@ctx.datasources.card.goalNumber
+      setActivity: =@ctx.datasources.card.setActivity
+      addActivity: =@ctx.datasources.card.addActivity
+      isActivitySet: =@ctx.datasources.card.isActivitySet
+      iconSize: 40
+      tableTitle: =@ctx.datasources.table.tableTitle
+      tableSubtitle: =@ctx.datasources.table.tableSubtitle
+      startDate: =@ctx.datasources.table.startDate
+      endDate: =@ctx.datasources.table.endDate
