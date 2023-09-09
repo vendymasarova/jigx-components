@@ -1,0 +1,10 @@
+type: datasource.static
+options:
+  data:
+    - id: 1
+      horizontalPadding: 20
+      verticalPadding: 16
+      activityName: Cycling
+      date: '01. 08. - 31. 08. 2023'
+      value: 213/250km
+      linkName: Update your goal

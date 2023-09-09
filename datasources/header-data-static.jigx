@@ -1,0 +1,8 @@
+type: datasource.static
+options:
+  data:
+    - id: 1
+      avatar: https://i.ibb.co/TrhvfS5/Avatar.png
+      welcomeMessage: 'Hi,'
+      name: Wendy
+      date: It's

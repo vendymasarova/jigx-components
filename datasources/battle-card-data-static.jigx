@@ -1,0 +1,18 @@
+type: datasource.static
+options:
+  data:
+    - id: 1
+      title: Climb Everest!
+      friendPhoto1: https://i.ibb.co/sHgs8ML/avatar1.png
+      friendPhoto2: https://i.ibb.co/sHgs8ML/avatar2.png  
+      friendName: Julian
+      result: 1
+      number: 5
+      daysLeft: 2
+    - id: 2
+      title: Weekend 100km!
+      friendPhoto1: https://i.ibb.co/YZqXndb/avatar2.png
+      friendName: Julian
+      result: 1
+      number: 5
+      daysLeft: 2

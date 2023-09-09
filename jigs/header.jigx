@@ -1,0 +1,23 @@
+title: Header
+description: Description of your Jig
+type: jig.default
+
+datasources:
+  mydata: 
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          avatar: https://i.ibb.co/TrhvfS5/Avatar.png
+          welcomeMessage: 'Hi,'
+          name: Wendy
+          date: It's
+
+children:
+  - type: component.custom-component
+    componentId: header-custom
+    inputs:
+      avatar: =@ctx.datasources.mydata.avatar
+      welcomeMessage: =@ctx.datasources.mydata.welcomeMessage & ' ' & @ctx.datasources.mydata.name & '!' & ' 👋'
+      name: =@ctx.datasources.mydata.name
+      date: =@ctx.datasources.mydata.date & ' ' & $fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')

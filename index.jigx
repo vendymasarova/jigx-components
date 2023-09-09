@@ -1,8 +1,28 @@
-name: my-custom-components
-title: my-custom-components
+name: cycling-gamification
+title: cycling-gamification
 category: business
+
+home:
+  - instanceId: home
+    jigId: custom-home
+    
 widgets:
   - size: 1x1 # choose size of the widget on the home hub
     jigId: activity-card
   - size: 1x1 # choose size of the widget on the home hub
     jigId: battle-card
+  - size: 1x1 # choose size of the widget on the home hub
+    jigId: header
+  - size: 1x1 # choose size of the widget on the home hub
+    jigId: goal-card
+
+# assets:
+#   theme:
+#     palette:
+#       light:
+#         color3:
+#           background: '#FFE99D'
+#           onBackground: '#000000'
+
+        
+        

@@ -11,17 +11,22 @@ children:
       children:
         - type: component.card
           options:
+            direction: row
             children: 
               - type: component.view
                 options:
                   style:
                     flex:
                       grow: 1
+                      shrink: 1
+                      basis: 0
                     justifyContent: space-between
+                    # alignContent: space-between
+                    # alignItems: center
                     height: 
                       min: 214
-                    width: 
-                      max: 294
+                    # width: 
+                      # min: 294
                     padding: medium
                   children:
                      # Hedader with avatar list
@@ -38,8 +43,10 @@ children:
                             options:
                               style:
                                 flex:
+                                  grow: 1
                                   direction: row
                                 justifyContent: space-between
+                                alignItems: center
                               children:
                                 - type: component.view
                                   options:
@@ -53,12 +60,10 @@ children:
                                         options:
                                           icon: running
                                           size: small
-                                          shape: circle
-                                          type: duotone
                                       - type: component.text
                                         options:
                                           value: =@ctx.inputs.title
-                                          size: small
+                                          size: regular
                                           weight: semi-bold
                                 - type: component.icon
                                   options:
@@ -73,7 +78,12 @@ children:
                                 - type: component.avatar
                                   options:
                                     title: =@ctx.inputs.friendName
-                                    uri: =@ctx.inputs.friendPhoto
+                                    uri: =@ctx.inputs.friendPhoto1
+                                    size: small
+                                - type: component.avatar
+                                  options:
+                                    title: =@ctx.inputs.friendName
+                                    uri: =@ctx.inputs.friendPhoto2
                                     size: small
                       # Body
                     - type: component.view

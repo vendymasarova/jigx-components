@@ -1,0 +1,51 @@
+title: Custom component
+type: jig.default
+    
+children:
+  - type: component.custom-component
+    componentId: header-custom
+    inputs:
+      avatar: =@ctx.datasources.header-data-static.avatar
+      welcomeMessage: =@ctx.datasources.header-data-static.welcomeMessage & ' ' & @ctx.datasources.header-data-static.name & '!' & ' 👋'
+      name: =@ctx.datasources.header-data-static.name
+      date: =@ctx.datasources.header-data-static.date & ' ' & $fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
+  
+  - type: component.custom-component
+    componentId: section-1
+    inputs:
+      title: Your challenge
+  
+  - type: component.custom-component
+    componentId: goal-card-custom
+    inputs:
+      horizontalPadding: =@ctx.datasources.goal-card-data-static.horizontalPadding
+      verticalPadding: =@ctx.datasources.goal-card-data-static.verticalPadding
+      activityName: =@ctx.datasources.goal-card-data-static.activityName
+      date: =@ctx.datasources.goal-card-data-static.date
+      value: =@ctx.datasources.goal-card-data-static.value
+      linkName: =@ctx.datasources.goal-card-data-static.linkName
+      
+  - type: component.custom-component
+    componentId: section-1
+    inputs:
+      title: Your battles
+          
+  - type: component.list
+    options:
+      isHorizontal: true
+      isHorizontalScrollIndicatorHidden: true
+      data: =@ctx.datasources.battle-card-data-static
+      item: 
+        type: component.custom-component
+        componentId: battle-card-custom
+        inputs:
+          title: =@ctx.current.item.title
+          friendPhoto1: =@ctx.current.item.friendPhoto1
+          friendPhoto2: =@ctx.current.item.friendPhoto2
+          friendName: =@ctx.current.item.friendName
+          result: =@ctx.current.item.result
+          number: =of & ' ' & @ctx.current.item.number
+          daysLeft: =@ctx.current.item.daysLeft
+          
+          
+          

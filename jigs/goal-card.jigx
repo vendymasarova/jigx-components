@@ -1,0 +1,27 @@
+title: Goal card
+description: Description of your Jig
+type: jig.default
+
+datasources:
+  mydata: 
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          horizontalPadding: 20
+          verticalPadding: 16
+          activityName: Cycling
+          date: '01. 08. - 31. 08. 2023'
+          value: 213/250km
+          linkName: Update your goal
+
+children:
+  - type: component.custom-component
+    componentId: goal-card-custom
+    inputs:
+      horizontalPadding: =@ctx.datasources.mydata.horizontalPadding
+      verticalPadding: =@ctx.datasources.mydata.verticalPadding
+      activityName: =@ctx.datasources.mydata.activityName
+      date: =@ctx.datasources.mydata.date
+      value: =@ctx.datasources.mydata.value
+      linkName: =@ctx.datasources.mydata.linkName

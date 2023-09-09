@@ -1,0 +1,5 @@
+type: datasource.static
+options:
+  data:
+    - id: 1
+      y: 86
