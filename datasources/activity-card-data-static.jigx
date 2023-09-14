@@ -1,0 +1,28 @@
+type: datasource.static
+options:
+  data:
+    - id: 1
+      icon: running
+      title: Running
+      label: '20%'
+      currentNumber: 20
+      goalNumber: 32
+      setActivity: Set your goals
+      addActivity: Add new activity
+      isActivitySet: false
+      iconSize: false
+      cardColor: color11
+      pieChartColor: color3
+    - id: 2
+      icon: running
+      title: Running
+      label: '20%'
+      currentNumber: 20
+      goalNumber: 32
+      setActivity: Set your goals
+      addActivity: Add new activity
+      isActivitySet: false
+      iconSize: 40
+      cardColor: color3
+      pieChartColor: color11
+      

@@ -1,0 +1,6 @@
+type: component.default
+children:
+  - type: component.button
+    options:
+      title: Choose period
+      type: secondary

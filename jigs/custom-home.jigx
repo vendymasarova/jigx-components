@@ -28,6 +28,31 @@ children:
   - type: component.custom-component
     componentId: section-1
     inputs:
+      title: Your activities
+      
+  - type: component.list
+    options:
+      data: =@ctx.datasources.activity-card-data-static
+      isHorizontal: true
+      isHorizontalScrollIndicatorHidden: true
+      item: 
+        type: component.custom-component
+        componentId: activity-card-1
+        inputs:
+          icon: =@ctx.current.item.icon
+          title: =@ctx.current.item.title
+          label: =@ctx.current.item.label
+          currentNumber: =@ctx.current.item.currentNumber & ' / '
+          goalNumber: =@ctx.current.item.goalNumber
+          setActivity: =@ctx.current.item.setActivity
+          addActivity: =@ctx.current.item.addActivity
+          isActivitySet: =@ctx.current.item.isActivitySet
+          cardColor: =@ctx.current.item.cardColor
+          pieChartColor: =@ctx.current.item.pieChartColor
+      
+  - type: component.custom-component
+    componentId: section-1
+    inputs:
       title: Your battles
           
   - type: component.list

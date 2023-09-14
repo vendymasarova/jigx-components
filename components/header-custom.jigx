@@ -1,0 +1,54 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        flex: 
+          direction: column
+        gap: small
+      children:
+        - type: component.view
+          options:
+            style:
+              justifyContent: flex-end
+              alignItems: flex-end
+            children:
+              - type: component.button
+                options:
+                  title: Choose period
+                  type: secondary
+                  isCompact: true
+        - type: component.view
+          options:
+            style:
+              flex:
+                direction: row
+              gap: small
+              alignItems: center 
+            children:
+              # Avatar
+              - type: component.avatar
+                options:
+                  title: =@ctx.inputs.name
+                  uri: =@ctx.inputs.avatar
+                  size: large
+                  align: left
+              # Text
+              - type: component.view
+                options:
+                  style:
+                    justifyContent: space-between
+                    alignItems: center
+                    gap: medium
+                  children:
+                    - type: component.text
+                      options:
+                        value: =@ctx.inputs.welcomeMessage
+                        align: center
+                        weight: semi-bold
+                        size: large
+                        emphasis: high
+                    - type: component.text
+                      options:
+                        value: =@ctx.inputs.date
+                        emphasis: medium

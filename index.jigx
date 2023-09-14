@@ -16,13 +16,23 @@ widgets:
   - size: 1x1 # choose size of the widget on the home hub
     jigId: goal-card
 
-# assets:
-#   theme:
-#     palette:
-#       light:
-#         color3:
-#           background: '#FFE99D'
-#           onBackground: '#000000'
-
+assets:
+  theme:
+    palette:
+      light:
+        color3:
+          background: "#FFE99D"
+          onBackground: "#595031"
+        color11:
+          background: "#D1CBFF"
+          onBackground: "#342F5C"
+        color14: 
+          background: '#FFFFFF'
+          onBackground: '#000000'
+        secondary: 
+          background: '#D1CBFF'
+          onBackground: '#342F5C'
+        
+        
         
         
