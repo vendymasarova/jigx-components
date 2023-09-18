@@ -2,17 +2,17 @@ type: datasource.static
 options:
   data:
     - id: 1
-      title: Climb Everest!
-      friendPhoto1: https://i.ibb.co/sHgs8ML/avatar1.png
-      friendPhoto2: https://i.ibb.co/sHgs8ML/avatar2.png  
+      title: September 400 km
+      friendPhoto1: https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80
+      friendPhoto2: https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80 
       friendName: Julian
-      result: 1
-      number: 5
+      result: 1/5
+      aim: 270 / 400
       daysLeft: 2
     - id: 2
       title: Weekend 100km!
-      friendPhoto1: https://i.ibb.co/YZqXndb/avatar2.png
-      friendName: Julian
-      result: 1
-      number: 5
-      daysLeft: 2
+      friendPhoto1: https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2960&q=80
+      friendName: https://plus.unsplash.com/premium_photo-1684783848496-afeca1349af5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80
+      result: 2/5
+      aim: 70 / 100
+      daysLeft: 1

@@ -5,6 +5,8 @@ children:
       style:
         flex: 
           direction: column
+          grow: 1
+          shrink: 1
         gap: medium
         margin: 
           right: small
@@ -21,12 +23,8 @@ children:
                       shrink: 1
                       basis: 0
                     justifyContent: space-between
-                    # alignContent: space-between
-                    # alignItems: center
                     height: 
                       min: 214
-                    # width: 
-                      # min: 294
                     padding: medium
                   children:
                      # Hedader with avatar list
@@ -59,15 +57,12 @@ children:
                                       - type: component.icon
                                         options:
                                           icon: running
-                                          size: small
+                                          size: regular
                                       - type: component.text
                                         options:
                                           value: =@ctx.inputs.title
                                           size: regular
                                           weight: semi-bold
-                                - type: component.icon
-                                  options:
-                                    icon: arrow-right
                           
                           - type: component.view
                             options:
@@ -90,45 +85,30 @@ children:
                       options:
                         style:
                           flex: 
-                            direction: row
-                          justifyContent: space-between
+                            direction: column
+                          gap: small
                           alignItems: center
                         children:
-                          # left title
-                          - type: component.view
-                            options:
-                              style:
-                                flex: 
-                                  
-                              children:
-                                - type: component.text
-                                  options:
-                                    value: You are..
                           # center title
-                          - type: component.view
+                          - type: component.text
                             options:
-                              style:
-                                
-                              children:
-                                - type: component.text
-                                  options:
-                                    value: =@ctx.inputs.result
-                                    size: extra-large
-                                    weight: bold
-                          # right title
-                          - type: component.view
+                              value: =@ctx.inputs.aim
+                              size: large
+                              weight: bold
+                          - type: component.text
                             options:
-                              style:
-                                
-                              children:
-                              - type: component.text
-                                options:
-                                  value: =@ctx.inputs.number
+                              value: ='Your rank:' & ' ' & @ctx.inputs.result
+                              size: small
+                              weight: regular
+                              emphasis: medium
                       # footer
                     - type: component.view
                       options:
                         style:
-                          justifyContent: flex-end
+                          flex:
+                            direction: row
+                          justifyContent: space-between
+                          alignItems: center
                         children:
                           - type: component.text
                             options:
@@ -136,6 +116,14 @@ children:
                               size: tiny
                               emphasis: low-medium
                               align: right
+                          - type: component.icon
+                            options:
+                              icon: arrow-right
+                              type: basic
+                              size: small
+                              shape: circle
+                              color: color11
+                            
 
                               
                       

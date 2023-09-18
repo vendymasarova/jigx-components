@@ -88,7 +88,7 @@ children:
           friendPhoto2: =@ctx.current.item.friendPhoto2
           friendName: =@ctx.current.item.friendName
           result: =@ctx.current.item.result
-          number: =of & ' ' & @ctx.current.item.number
+          aim: =@ctx.current.item.aim
           daysLeft: =@ctx.current.item.daysLeft
           
           
