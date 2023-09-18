@@ -10,45 +10,64 @@ children:
       name: =@ctx.datasources.header-data-static.name
       date: =@ctx.datasources.header-data-static.date & ' ' & $fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
   
-  - type: component.custom-component
-    componentId: section-1
-    inputs:
-      title: Your challenge
+  # - type: component.custom-component
+  #   componentId: section-1
+  #   inputs:
+  #     title: Your challenge
   
-  - type: component.custom-component
-    componentId: goal-card-custom
-    inputs:
-      horizontalPadding: =@ctx.datasources.goal-card-data-static.horizontalPadding
-      verticalPadding: =@ctx.datasources.goal-card-data-static.verticalPadding
-      activityName: =@ctx.datasources.goal-card-data-static.activityName
-      date: =@ctx.datasources.goal-card-data-static.date
-      value: =@ctx.datasources.goal-card-data-static.value
-      linkName: =@ctx.datasources.goal-card-data-static.linkName
+  # - type: component.custom-component
+  #   componentId: goal-card-custom
+  #   inputs:
+  #     horizontalPadding: =@ctx.datasources.goal-card-data-static.horizontalPadding
+  #     verticalPadding: =@ctx.datasources.goal-card-data-static.verticalPadding
+  #     activityName: =@ctx.datasources.goal-card-data-static.activityName
+  #     date: =@ctx.datasources.goal-card-data-static.date
+  #     value: =@ctx.datasources.goal-card-data-static.value
+  #     linkName: =@ctx.datasources.goal-card-data-static.linkName
       
   - type: component.custom-component
     componentId: section-1
     inputs:
       title: Your activities
       
-  - type: component.list
-    options:
-      data: =@ctx.datasources.activity-card-data-static
-      isHorizontal: true
-      isHorizontalScrollIndicatorHidden: true
-      item: 
-        type: component.custom-component
-        componentId: activity-card-1
-        inputs:
-          icon: =@ctx.current.item.icon
-          title: =@ctx.current.item.title
-          label: =@ctx.current.item.label
-          currentNumber: =@ctx.current.item.currentNumber & ' / '
-          goalNumber: =@ctx.current.item.goalNumber
-          setActivity: =@ctx.current.item.setActivity
-          addActivity: =@ctx.current.item.addActivity
-          isActivitySet: =@ctx.current.item.isActivitySet
-          cardColor: =@ctx.current.item.cardColor
-          pieChartColor: =@ctx.current.item.pieChartColor
+  - type: component.custom-component
+    componentId: activity-card-1
+    inputs:
+      secCardIcon: =@ctx.datasources.activity-card-secondary-data-static.secCardIcon
+      secCardTitle: =@ctx.datasources.activity-card-secondary-data-static.secCardTitle
+      secCardLabel: =@ctx.datasources.activity-card-secondary-data-static.secCardLabel
+      secCardCurrentNumber: =@ctx.datasources.activity-card-secondary-data-static.secCardCurrentNumber & ' / '
+      secCardGoalNumber: =@ctx.datasources.activity-card-secondary-data-static.secCardGoalNumber
+      secCardSetActivity: =@ctx.datasources.activity-card-secondary-data-static.secCardSetActivity
+      secCardAddActivity: =@ctx.datasources.activity-card-secondary-data-static.secCardAddActivity
+      secCardIsActivitySet: =@ctx.datasources.activity-card-secondary-data-static.secCardIsActivitySet
+      secCardColor: =@ctx.datasources.activity-card-secondary-data-static.secCardColor
+      secCardPieChartColor: =@ctx.datasources.activity-card-secondary-data-static.secCardPieChartColor
+      secCardIconSize: =@ctx.datasources.activity-card-secondary-data-static.secCardIconSize
+      terCardIcon: =@ctx.datasources.activity-card-tertiary-data-static.terCardIcon
+      terCardTitle: =@ctx.datasources.activity-card-tertiary-data-static.terCardTitle
+      terCardLabel: =@ctx.datasources.activity-card-tertiary-data-static.terCardLabel
+      terCardCurrentNumber: =@ctx.datasources.activity-card-tertiary-data-static.terCardCurrentNumber & ' / '
+      terCardGoalNumber: =@ctx.datasources.activity-card-tertiary-data-static.terCardGoalNumber
+      terCardSetActivity: =@ctx.datasources.activity-card-tertiary-data-static.terCardSetActivity
+      terCardAddActivity: =@ctx.datasources.activity-card-tertiary-data-static.terCardAddActivity
+      terCardIsActivitySet: =@ctx.datasources.activity-card-tertiary-data-static.terCardIsActivitySet
+      terCardColor: =@ctx.datasources.activity-card-tertiary-data-static.terCardColor
+      terCardPieChartColor: =@ctx.datasources.activity-card-tertiary-data-static.terCardPieChartColor
+      terCardIconSize: =@ctx.datasources.activity-card-tertiary-data-static.terCardIconSize
+      icon: =@ctx.datasources.activity-card-data-static.icon
+      title: =@ctx.datasources.activity-card-data-static.title
+      label: =@ctx.datasources.activity-card-data-static.label
+      currentNumber: =@ctx.datasources.activity-card-data-static.currentNumber & ' / '
+      goalNumber: =@ctx.datasources.activity-card-data-static.goalNumber
+      setActivity: =@ctx.datasources.activity-card-data-static.setActivity
+      addActivity: =@ctx.datasources.activity-card-data-static.addActivity
+      isActivitySet: =@ctx.datasources.activity-card-data-static.isActivitySet
+      cardColor: =@ctx.datasources.activity-card-data-static.cardColor
+      pieChartColor: =@ctx.datasources.activity-card-data-static.pieChartColor
+      iconSize: =@ctx.datasources.activity-card-data-static.iconSize
+      setActivityIconColor: =@ctx.datasources.activity-card-data-static.setActivityIconColor
+      image: =@ctx.datasources.activity-card-data-static.image
       
   - type: component.custom-component
     componentId: section-1

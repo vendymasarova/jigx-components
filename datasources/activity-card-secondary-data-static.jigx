@@ -1,0 +1,31 @@
+type: datasource.static
+options:
+  data:
+    - secCardId: 1
+      secCardIcon: running
+      secCardTitle: Running
+      secCardLabel: '20%'
+      secCardCurrentNumber: 20
+      secCardGoalNumber: 32
+      secCardSetActivity: Set your goals
+      secCardAddActivity: Add new activity
+      secCardIsActivitySet: false
+      secCardIconSize: false
+      secCardColor: color3
+      secCardPieChartColor: color11
+      setActivityIconColor: color10
+      
+    # - secCardId: 2
+    #   secCardIcon: running
+    #   secCardTitle: Running
+    #   secCardLabel: '20%'
+    #   secCardCurrentNumber: 20
+    #   secCardGoalNumber: 32
+    #   secCardSetActivity: Set your goals
+    #   secCardAddActivity: Add new activity
+    #   secCardIsActivitySet: false
+    #   secCardIconSize: 40
+    #   secCardColor: color3
+    #   secCardPieChartColor: color11
+  
+      

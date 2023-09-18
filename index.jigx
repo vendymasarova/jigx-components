@@ -29,9 +29,16 @@ assets:
         color14: 
           background: '#FFFFFF'
           onBackground: '#000000'
-        secondary: 
+        color10: 
+          background: '#C7F4C3'
+          onBackground: '#3E5B3C'
+        primary: 
           background: '#D1CBFF'
           onBackground: '#342F5C'
+        secondary:
+          background: "#FFE99D"
+          onBackground: "#595031"
+        
         
         
         

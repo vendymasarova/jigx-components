@@ -1,0 +1,19 @@
+type: datasource.static
+options:
+  data:
+    - terCardId: 2
+      terCardIcon: running
+      terCardTitle: Running
+      terCardLabel: '20%'
+      terCardCurrentNumber: 20
+      terCardGoalNumber: 32
+      terCardSetActivity: Set your goals
+      terCardAddActivity: Add new activity
+      terCardIsActivitySet: true
+      terCardIconSize: 40
+      terCardColor: color14
+      terCardPieChartColor: color11
+      setActivityIconColor: color10
+      
+  
+      
